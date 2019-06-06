@@ -13,7 +13,7 @@ module.exports = function (io) {
       console.log(posiciones)
     });
     
-    socket.emit('todos', posiciones);
+    //socket.emit('todos', posiciones);
 
     socket.on('posRenov', (data) => {
       posiciones[socket.id] = data;
