@@ -29,9 +29,11 @@ function SocketsS(){
     rectangulo.draw();
     if (arr !== undefined){
       for(idx in arr){
-        pos = arr[idx];
-        ctx.fillStyle = 'blue';
-        ctx.fillRect(pos[0], pos[1], 50, 50);
+        if (idx !== id){
+          pos = arr[idx];
+          ctx.fillStyle = 'blue';
+          ctx.fillRect(pos[0], pos[1], 50, 50);
+        }
       }
     }
   }
