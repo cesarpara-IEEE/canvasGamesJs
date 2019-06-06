@@ -9,6 +9,7 @@ module.exports = function (io) {
 
     socket.emit('envioSoc', socket.id, posicion => {
       posiciones[socket.id] = posicion
+      io.sockets.emit('todos', posiciones);
       console.log(posiciones)
     });
     
