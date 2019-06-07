@@ -1,25 +1,6 @@
 
-export class user {
-  constructor(){
-    this.id
-  }
-}
 
-export class rect {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.color = 'blue';
-    this.vx = 5;
-    this.vy = 5;
-  }
-
-  getFif(){
-    return [this.color, this.x, this.y];
-  }
-}
-
-export class dibujar {
+class draw {
   constructor(user, rect, id){
     this.user = user
     this.rect = rect
@@ -28,7 +9,7 @@ export class dibujar {
     this.arr = []
   }
   
-  draw(){
+  pintar(){
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
     var lis = this.rect.getFif()
     this.ctx.fillStyle = lis[0];
@@ -44,3 +25,5 @@ export class dibujar {
     }
   }
 }
+
+export {draw}
