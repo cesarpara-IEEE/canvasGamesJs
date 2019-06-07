@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 3000);
 require('./sockets')(io);
 
 // Archivos estaticos
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 // Escuchando al servidor
